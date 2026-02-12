@@ -8,10 +8,11 @@ import java.time.Duration;
 public class RentalService {
 	private Double pricePerHour;
 	private Double pricePerDay;
+
+	// Depende exclusivamente das taxas do Brasil, mas poderia ser de outro país
+	private TaxService taxService;
 	
-	private BrasilTaxService taxService;
-	
-	public RentalService(Double pricePerHour, Double pricePerDay,  BrasilTaxService taxService) {
+	public RentalService(Double pricePerHour, Double pricePerDay,  TaxService taxService) {
 		this.pricePerHour = pricePerHour;
 		this.pricePerDay = pricePerDay;
 		this.taxService = taxService;

@@ -1,6 +1,7 @@
 package services;
 
-public class BrasilTaxService {
+// Funciona como se fosse uma herança, porém estabelecendo contratos
+public class BrasilTaxService implements TaxService {
 	public double tax(double amount) {
 		if (amount < 100.0) {
 			return amount * 0.2;
